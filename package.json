@@ -5,20 +5,20 @@
   "description": "",
   "unity": "2022.3",
   "unityRelease": "16f1",
-  "documentationUrl": "https://github.com/throwingcat/Violet",
-  "changelogUrl": "https://github.com/throwingcat/Violet",
-  "licensesUrl": "https://github.com/throwingcat/Violet",
+  "documentationUrl": "https://github.com/throwingcat/VioletSheetManager",
+  "changelogUrl": "https://github.com/throwingcat/VioletSheetManager/blob/main/LICENSE",
+  "licensesUrl": "https://github.com/throwingcat/VioletSheetManager/blob/main/CHANGELOG.md",
   "dependencies": {
     "com.unity.editorcoroutines": "1.0.0",
-    "com.unity.textmeshpro": "3.0.6"
   },
   "keywords": [
     "Violet",
-    "FramwWork"
+    "SheetManager",
+    "Violet SheetManager"
   ],
   "author": {
     "name": "simon",
     "email": "throwingcat@gmail.com",
-    "url": "https://github.com/throwingcat/Violet"
+    "url": "https://github.com/throwingcat/VioletSheetManager"
   }
 }
