@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e1f5518c988d3034a9d846f7428f4fd4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - asset: {fileID: 9197481963319205126, guid: adf8fe84928c32b478ca66347c61abe7, type: 3}
+  - sheetItemAsset: {fileID: 9197481963319205126, guid: 902857ee71da9aa439517512e7b8b281,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
