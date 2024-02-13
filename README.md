@@ -8,6 +8,11 @@ Violet SheetManager
 
 ---
 [사용방법]
+## Project Settings 옵션 설정
+Project Setting > Player > Other Settings > Configuration
+
+Allow downloads over HTTP* 항목을 Always allowed로 설정합니다.
+
 ## Config 생성
 프로젝트탭에서 Create/Violet/SheetManager/Config 메뉴를 통해 Config 파일을 생성합니다.
 

@@ -15,9 +15,6 @@
                 <ui:TextField picking-mode="Ignore" label="URL" name="url" is-delayed="true" />
                 <ui:TextField picking-mode="Ignore" label="Description" name="description" is-delayed="true" />
             </ui:VisualElement>
-            <ui:VisualElement name="ButtonGroup" style="flex-grow: 1; flex-direction: row; justify-content: flex-end; align-items: stretch; min-width: 20%; flex-wrap: nowrap;">
-                <ui:Button text="Generate Class" parse-escape-sequences="true" display-tooltip-when-elided="true" name="generate_class" style="-unity-text-align: middle-center; flex-wrap: wrap;" />
-            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

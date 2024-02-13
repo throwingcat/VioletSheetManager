@@ -16,8 +16,7 @@
         <ui:VisualElement name="function_group" style="flex-grow: 1; flex-direction: column; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px;">
             <ui:ProgressBar value="22" title="my-progress" name="progress" style="display: none;" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse;">
-                <ui:Button text="Generate All" parse-escape-sequences="true" display-tooltip-when-elided="true" name="generate_all" style="-unity-text-align: middle-center;" />
-                <ui:Button text="Download" parse-escape-sequences="true" display-tooltip-when-elided="true" name="download" style="-unity-text-align: middle-center;" />
+                <ui:Button text="Generate" parse-escape-sequences="true" display-tooltip-when-elided="true" name="generate_all" style="-unity-text-align: middle-center;" />
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1;" />
         </ui:VisualElement>
