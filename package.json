@@ -9,7 +9,7 @@
   "changelogUrl": "https://github.com/throwingcat/VioletSheetManager/blob/main/LICENSE",
   "licensesUrl": "https://github.com/throwingcat/VioletSheetManager/blob/main/CHANGELOG.md",
   "dependencies": {
-    "com.unity.editorcoroutines": "1.0.0",
+    "com.unity.editorcoroutines": "1.0.0"
   },
   "keywords": [
     "Violet",
