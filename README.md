@@ -13,6 +13,17 @@ Project Setting > Player > Other Settings > Configuration
 
 Allow downloads over HTTP* 항목을 Always allowed로 설정합니다.
 
+## Config 생성
+프로젝트탭에서 Create/Violet/SheetManager/Config 메뉴를 통해 Config 파일을 생성합니다.
+
+## Config 설정
+
+1. 클래스가 생성될 폴더를 연결합니다
+2. Sheet추가하고 Sheet의 이름과 다운로드 URL을 작성합니다.
+3. 다운로드시 주소는 BaseURL + URL로 연결합니다.
+
+---
+
 ## Manager 생성
 
 1. Unity 상단 메뉴 Violet/Sheet/Generate 메뉴를 통해 매니저 스크립트를 생성합니다.
@@ -25,16 +36,6 @@ Allow downloads over HTTP* 항목을 Always allowed로 설정합니다.
 
 ---
 
-## Config 생성
-프로젝트탭에서 Create/Violet/SheetManager/Config 메뉴를 통해 Config 파일을 생성합니다.
-
-## Config 설정
-
-1. 클래스가 생성될 폴더를 연결합니다
-2. Sheet추가하고 Sheet의 이름과 다운로드 URL을 작성합니다.
-3. 다운로드시 주소는 BaseURL + URL로 연결합니다.
-
----
 
 
 
