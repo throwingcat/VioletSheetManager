@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-color: rgb(160, 160, 160); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;">
+        <ui:Label tabindex="-1" text="Excel Reader Setting Window" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: auto; -unity-font-style: bold; font-size: 20px;" />
+        <ui:VisualElement name="Detail" style="flex-grow: 1; flex-direction: column; justify-content: space-between; border-left-color: rgb(82, 82, 82); border-right-color: rgb(82, 82, 82); border-top-color: rgb(82, 82, 82); border-bottom-color: rgb(82, 82, 82); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; width: 100%;">
+            <ui:VisualElement name="InformationGroup" style="flex-grow: 1; min-width: 70%;">
+                <ui:IntegerField label="Variable Type Line" value="0" name="variable_type_line" style="-unity-font-style: normal; font-size: 14px;" />
+                <ui:IntegerField label="Variable Name Line" value="1" name="variable_name_line" style="-unity-font-style: normal; font-size: 14px;" />
+                <ui:IntegerField label="Value Start Line" value="2" name="value_start_line" style="-unity-font-style: normal; font-size: 14px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TypeCasting" style="flex-grow: 1; border-left-color: rgb(82, 82, 82); border-right-color: rgb(82, 82, 82); border-top-color: rgb(82, 82, 82); border-bottom-color: rgb(82, 82, 82); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;">
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-between;">
+                    <ui:VisualElement style="flex-grow: 1; align-self: auto; align-items: center;">
+                        <ui:Label tabindex="-1" text="FROM" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="font-size: 24px; -unity-font-style: bold; width: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; align-items: center;">
+                        <ui:Label tabindex="-1" text="▶" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; align-items: center;">
+                        <ui:Label tabindex="-1" text="TO" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 24px; -unity-font-style: bold; width: auto;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:ListView name="type_casting_list_view" style="border-left-color: rgba(199, 199, 199, 0); border-right-color: rgba(199, 199, 199, 0); border-top-color: rgba(199, 199, 199, 0); border-bottom-color: rgb(199, 199, 199); border-bottom-width: 1px;" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse;">
+                    <ui:Button text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn_type_casting_add" style="padding-top: 4px; padding-right: 8px; padding-bottom: 4px; padding-left: 8px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

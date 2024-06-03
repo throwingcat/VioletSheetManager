@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Violet.SheetManager
@@ -9,9 +10,10 @@ namespace Violet.SheetManager
     {
         public string name;
         public string url;
-    
+
         #if UNITY_EDITOR
-        public bool showDetail = true;
+        public GUID guid;
+        public bool toggle = false;
         #endif
     }
 }

@@ -1,20 +1,22 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-bottom-color: rgb(160, 160, 160); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;">
-        <ui:VisualElement name="Title" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: flex-start; align-self: center;">
-            <ui:VisualElement name="StateGroup" style="flex-grow: 1; flex-direction: row; width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px;">
-                <ui:VisualElement name="check_mark" style="flex-grow: 1; width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-height: 16px; background-image: url(&apos;project://database/Assets/VioletSheetManager/Editor/_resources/icon_check.png?fileID=2800000&amp;guid=bb78a2965eafce846bf31a20d0960c40&amp;type=3#icon_check&apos;); min-width: 16px; display: flex;" />
-                <ui:VisualElement name="question_mark" style="flex-grow: 1; width: 16px; height: 16px; max-width: 16px; min-width: 16px; min-height: 16px; max-height: 16px; background-image: url(&apos;project://database/Assets/VioletSheetManager/Editor/_resources/icon_question.png?fileID=2800000&amp;guid=c1c0c8dd4e95b58478194e808de10bd3&amp;type=3#icon_question&apos;);" />
-            </ui:VisualElement>
-            <ui:VisualElement name="NameGroup" style="flex-grow: 1; flex-direction: row; align-items: flex-start; justify-content: flex-start; align-self: center; flex-wrap: nowrap; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;">
-                <ui:TextField picking-mode="Ignore" label="Sheet Name" value="filler text" name="name" is-delayed="true" style="flex-wrap: wrap;" />
-            </ui:VisualElement>
-            <ui:Button text="▼" parse-escape-sequences="true" display-tooltip-when-elided="true" name="detail_toggle_button" style="width: 20px; height: 20px;" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 0; margin-right: 4px; margin-bottom: 4px; margin-left: 0; padding-top: 0; padding-right: 4px; padding-bottom: 0; padding-left: 4px; border-bottom-color: rgb(82, 82, 82); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(82, 82, 82); border-right-color: rgb(82, 82, 82); border-top-color: rgb(82, 82, 82);">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; -unity-text-align: upper-center; justify-content: flex-start; align-items: stretch; width: 100%;">
+            <ui:Button text="▶" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn_toggle" style="background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; -unity-text-align: middle-left; -unity-font-style: normal; font-size: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 2px; padding-bottom: 0; padding-left: 0;" />
+            <ui:Label tabindex="-1" text="SheetName" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sheet_name_title" />
         </ui:VisualElement>
-        <ui:VisualElement name="Detail" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
-            <ui:VisualElement name="InformationGroup" style="flex-grow: 1; min-width: 70%;">
-                <ui:TextField picking-mode="Ignore" label="URL" name="url" is-delayed="true" />
-                <ui:TextField picking-mode="Ignore" label="Description" name="description" is-delayed="true" />
+        <ui:VisualElement name="Information" style="flex-grow: 1; margin-left: 20px;">
+            <ui:VisualElement name="Title" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: flex-start; align-self: center;">
+                <ui:VisualElement name="NameGroup" style="flex-grow: 1; flex-direction: row; align-items: flex-start; justify-content: flex-start; align-self: center; flex-wrap: nowrap; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <ui:TextField picking-mode="Ignore" label="Sheet Name" value="filler text" name="name" is-delayed="true" style="flex-wrap: wrap;" />
+                </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="Detail" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                <ui:VisualElement name="InformationGroup" style="flex-grow: 1; min-width: 70%;">
+                    <ui:TextField picking-mode="Ignore" label="URL" name="url" is-delayed="true" />
+                    <ui:TextField picking-mode="Ignore" label="Description" name="description" is-delayed="true" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <uie:ObjectField label="Excel File" allow-scene-objects="true" name="excel_file_field" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

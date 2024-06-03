@@ -10,25 +10,61 @@ namespace Violet.SheetManager.Editor
 {
     public static class Generator
     {
-        public static void CsvToClass(string path,string fileName, string csv)
+        public static void ExcelToClass(ExcelReader.ExcelAttribute InExcelAttribute, Config InConfig,string InGeneratePath)
+        {
+            string className = $"{InExcelAttribute.ClassName}";
+            var code = "using System;\n" +
+                       "using Violet.Sheet;\n" +
+                       "namespace Violet.Sheet\n{\n" +
+                       $"\tpublic partial class {className} : SheetDataBase\n" +
+                       "\t{\n";
+
+            for (int i = 0; i < InExcelAttribute.VariableNames.Count; i++)
+            {
+                string VariableType = InExcelAttribute.VariableTypes[i];
+                
+                //Excel의 Variable Type을 사용 가능한 변수형태로 변경
+                if (InConfig.excelSettingInformation.ConvertType(VariableType, out VariableType))
+                {
+                    string VariableName = InExcelAttribute.VariableNames[i];
+                    string line = $"public {VariableType} {VariableName} {{ get; set; }}\n";
+                    code += $"\t\t{line}";    
+                }
+            }
+            
+            code += "\t}\n}";
+            
+            var classFilePath = $"{InGeneratePath}/{InExcelAttribute.ClassName}.cs";
+            classFilePath = classFilePath.Replace("Assets/", $"{Application.dataPath}/");
+
+            if (File.Exists(classFilePath))
+                File.Delete(classFilePath);
+            var stream = File.Create(classFilePath);
+            var sw = new StreamWriter(stream);
+            sw.Write(code);
+            sw.Close();
+        }
+
+        public static void CsvToClass(string path, string fileName, string csv)
         {
             var lines = csv.Split('\n');
             var columnNames = lines[0].Split(',').ToArray();
-            
+
             var dataRows = new string[lines.Length - 2][];
             for (var i = 0; i < lines.Length - 2; i++)
                 dataRows[i] = lines[i + 1].Split(',').ToArray();
-            
+
             var className = fileName;
 
             var code = "using System;\n" +
                        "using Violet.Sheet;\n" +
                        "namespace Violet.Sheet\n{\n" +
-                        $"\tpublic partial class {className} : SheetDataBase\n" + 
+                       $"\tpublic partial class {className} : SheetDataBase\n" +
                        "\t{\n";
             for (var columnIndex = 0; columnIndex < columnNames.Length; columnIndex++)
             {
-                var columnName = Regex.Replace(columnNames[columnIndex], @"[\s\.]", string.Empty, RegexOptions.IgnoreCase);
+                var columnName = Regex.Replace(columnNames[columnIndex], @"[\s\.]", string.Empty,
+                    RegexOptions.IgnoreCase);
                 if (string.IsNullOrEmpty(columnName))
                     columnName = "Column" + (columnIndex + 1);
 
@@ -47,10 +83,10 @@ namespace Violet.SheetManager.Editor
             }
 
             code += "\t}\n}";
-            
+
             var classFilePath = $"{path}/{fileName}.cs";
             classFilePath = classFilePath.Replace("Assets/", $"{Application.dataPath}/");
-            
+
             if (File.Exists(classFilePath))
                 File.Delete(classFilePath);
             var stream = File.Create(classFilePath);

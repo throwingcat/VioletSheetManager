@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 0; margin-right: 4px; margin-bottom: 4px; margin-left: 0; padding-top: 0; padding-right: 4px; padding-bottom: 0; padding-left: 4px; border-bottom-color: rgb(82, 82, 82); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(82, 82, 82); border-right-color: rgb(82, 82, 82); border-top-color: rgb(82, 82, 82); width: 100%;">
+        <ui:TextField picking-mode="Ignore" value="filler text" name="from_type" style="width: 45%;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" name="to_type" style="width: 45%;" />
+        <ui:Button text="-" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btn_delete" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 4px; padding-right: 8px; padding-bottom: 4px; padding-left: 8px;" />
+    </ui:VisualElement>
+</ui:UXML>
