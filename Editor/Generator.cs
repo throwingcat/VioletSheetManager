@@ -19,7 +19,7 @@ namespace Violet.SheetManager.Editor
                        $"\tpublic partial class {className} : SheetDataBase\n" +
                        "\t{\n";
 
-            for (int i = 0; i < InExcelAttribute.VariableNames.Count; i++)
+            for (int i = 0; i < InExcelAttribute.VariableTypes.Count; i++)
             {
                 string VariableType = InExcelAttribute.VariableTypes[i];
                 
