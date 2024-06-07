@@ -12,7 +12,7 @@ namespace Violet.SheetManager
         public string url;
 
         #if UNITY_EDITOR
-        public GUID guid;
+        public string guid;
         public bool toggle = false;
         #endif
     }
