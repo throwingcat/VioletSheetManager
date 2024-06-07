@@ -79,8 +79,7 @@ namespace Violet.SheetManager.Editor
                             newSheetItem.name = excelAttribute.ClassName;
 
                             var RelativePath = Path.Replace(Application.dataPath, "Assets");
-                            newSheetItem.guid = AssetDatabase.GUIDFromAssetPath(RelativePath);
-                            ;
+                            newSheetItem.guid = AssetDatabase.GUIDFromAssetPath(RelativePath).ToString();
                             _attribute.SheetItems.Add(newSheetItem);
                         }
                     }
@@ -166,7 +165,7 @@ namespace Violet.SheetManager.Editor
             {
                 foreach (var Item in component.attribute.SheetItems)
                 {
-                    var RelativeAssetPath = AssetDatabase.GUIDToAssetPath(Item.guid);
+                    var RelativeAssetPath = AssetDatabase.GUIDToAssetPath(new GUID(Item.guid));
                     var FullPath = RelativeAssetPath.Replace("Assets/", $"{Application.dataPath}/");
                     var ExcelAttribute = ExcelReader.Read(FullPath, component);
                     ExcelAttribute.ClassName = Item.name;
@@ -230,7 +229,7 @@ namespace Violet.SheetManager.Editor
                     });
 
                     var excelFileField = element.Q<ObjectField>("excel_file_field");
-                    var assetPath = AssetDatabase.GUIDToAssetPath(_attribute.SheetItems[i].guid);
+                    var assetPath = AssetDatabase.GUIDToAssetPath(new GUID(_attribute.SheetItems[i].guid));
                     excelFileField.value = AssetDatabase.LoadAssetAtPath<Object>(assetPath);
 
                     var title = element.Q<Label>("sheet_name_title");
